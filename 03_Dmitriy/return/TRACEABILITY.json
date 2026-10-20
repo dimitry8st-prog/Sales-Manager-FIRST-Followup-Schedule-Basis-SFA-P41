@@ -1,0 +1,946 @@
+{
+  "component": "SFA-P41-BASIS R1",
+  "status": "COMPONENT_IMPLEMENTED",
+  "requirements": [
+    {
+      "id": "C1",
+      "source_requirement": "CONTRACT.md:1 inputs / rule 1",
+      "requirement": "Exact scope, identifiers, canonical UUID and aware now; malformed builtin domain rejected without user hooks",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "_check_json_domain",
+          "line": 40,
+          "end_line": 73
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "_valid_id",
+          "line": 76,
+          "end_line": 88
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "_validated_now",
+          "line": 106,
+          "end_line": 116
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_public_signature_has_only_keyword_inputs",
+          "line": 131,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_scope_exact_shape_and_null_thread_rejected",
+          "line": 344,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_plain_identifier_boundaries",
+          "line": 357,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_uuid_canonical_and_nil",
+          "line": 373,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_non_json_types_rejected_before_dependencies",
+          "line": 387,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_user_hooks_and_container_subclasses_are_not_executed",
+          "line": 401,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_non_string_json_keys_rejected",
+          "line": 426,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_type_metaclass_comparison_hook_is_not_executed",
+          "line": 432,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_fake_now_class_property_is_not_executed",
+          "line": 452,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_malformed_record_types_never_escape_as_raw_exceptions",
+          "line": 466,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_circular_json_is_rejected_without_recursion_failure",
+          "line": 474,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_now_requires_real_aware_datetime_and_accepts_subclass",
+          "line": 563,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_broken_now_timezone_is_contract_error_not_raw_exception",
+          "line": 575,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_scope_shape",
+          "line": 66,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_utf8_identifier",
+          "line": 69,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C2",
+      "source_requirement": "CONTRACT.md:rule 2",
+      "requirement": "Real unchanged F103 validation with exact nonpersisted AUTOREPLY event and complete state/policy including permitted extras",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "_check_json_domain",
+          "line": 40,
+          "end_line": 73
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_real_public_dependencies_and_validation_event",
+          "line": 148,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_sender_mismatch_uses_scope_error_before_f103",
+          "line": 275,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_f103_required_fields_and_schemas_are_not_reimplemented",
+          "line": 320,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_valid_aliases_and_extra_f103_fields_are_preserved",
+          "line": 486,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_deep_valid_extra_fields_have_no_invented_depth_limit",
+          "line": 498,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_no_implicit_policy",
+          "line": 71,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C3",
+      "source_requirement": "CONTRACT.md:rule 3",
+      "requirement": "State/action scope and sender correlations; ACTIVE required, STOPPED/HANDED_OFF fenced",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_scope_links_for_every_field",
+          "line": 253,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_state_and_action_scope_links_for_every_field",
+          "line": 262,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_sender_mismatch_uses_scope_error_before_f103",
+          "line": 275,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_fences",
+          "line": 310,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_scope_each_field",
+          "line": 33,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_fences",
+          "line": 45,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C4",
+      "source_requirement": "CONTRACT.md:rule 4",
+      "requirement": "Real F114 payload/hash verification; action identity/policy/locale/pack links; mail kinds allowed, HANDOFF excluded; historical revision allowed",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_all_outbound_mail_kinds_allowed_with_current_thread",
+          "line": 170,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_valid_original_handoff_is_not_a_send_source",
+          "line": 178,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_action_policy_locale_and_pack_links",
+          "line": 280,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_synthetic_locale_works_without_fixed_language_allowlist",
+          "line": 297,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_historical_action_revision_need_not_equal_current_state",
+          "line": 304,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_original_payload_validation_and_hash_are_required",
+          "line": 334,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_rejection_does_not_mutate_inputs_or_leak_payload",
+          "line": 667,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_identity_locale_versions",
+          "line": 37,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_receipt_payload_scope_identity",
+          "line": 40,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_payload_hash",
+          "line": 64,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C5",
+      "source_requirement": "CONTRACT.md:rule 5",
+      "requirement": "Real F108 normalization and action/payload/scope links; ACCEPTED retained; UNKNOWN/NOT_SENT not a basis",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_accepted_and_delivered_preserve_receipt_semantics",
+          "line": 183,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_all_unconfirmed_outcomes_and_null_receipt",
+          "line": 194,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_inconsistent_provider_receipt_is_dependency_rejected",
+          "line": 215,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_receipt_disagreement_is_dependency_rejected",
+          "line": 228,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_matching_foreign_attempt_and_receipt_is_scope_mismatch",
+          "line": 240,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_accepted_stays_accepted",
+          "line": 25,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_unconfirmed_outcomes",
+          "line": 27,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_receipt_payload_scope_identity",
+          "line": 40,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_valid_receipt_wrong_action",
+          "line": 43,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C6",
+      "source_requirement": "CONTRACT.md:rule 6",
+      "requirement": "Timestamp only from state, strict RFC3339, real calendar/offset/future checks, UTC microseconds and edge safety",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "_last_outbound",
+          "line": 119,
+          "end_line": 136
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "_utc_microseconds",
+          "line": 91,
+          "end_line": 103
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_timestamp_normalization_preserves_microseconds",
+          "line": 506,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_bad_timestamp_forms_are_source_unconfirmed",
+          "line": 518,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_future_timestamp_one_microsecond_and_exact_now",
+          "line": 534,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_timestamp_utc_and_cooldown_overflows_are_source_unconfirmed",
+          "line": 541,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_representable_extreme_times_with_zero_cooldown",
+          "line": 555,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_timestamp_is_only_taken_from_state",
+          "line": 584,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_time_offsets",
+          "line": 55,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_bad_times",
+          "line": 57,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C7",
+      "source_requirement": "CONTRACT.md:rule 7",
+      "requirement": "Exact nonnegative integers; zero/exhausted cap is projected; compatible cooldown overflow rejected",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_timestamp_utc_and_cooldown_overflows_are_source_unconfirmed",
+          "line": 541,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_representable_extreme_times_with_zero_cooldown",
+          "line": 555,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_exact_numeric_types_and_nonnegative_values",
+          "line": 592,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_zero_and_exhausted_caps_remain_valid_basis",
+          "line": 600,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_zero_cooldown_allows_same_instant",
+          "line": 646,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_numeric_boundaries",
+          "line": 48,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_overflow",
+          "line": 62,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C8",
+      "source_requirement": "CONTRACT.md:result and preservation",
+      "requirement": "New exact seven-field dict, deterministic repeated calls, no input mutation, no input leak or I/O/clock/process effects",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "ScheduleBasisError",
+          "line": 28,
+          "end_line": 33
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "_fail",
+          "line": 36,
+          "end_line": 37
+        },
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_exact_fixture_and_seven_fields",
+          "line": 141,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_inputs_unchanged_and_result_fresh_for_repeated_calls",
+          "line": 654,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_rejection_does_not_mutate_inputs_or_leak_payload",
+          "line": 667,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_import_and_projection_under_io_clock_process_denial",
+          "line": 675,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_no_mutation",
+          "line": 13,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    },
+    {
+      "id": "C9",
+      "source_requirement": "CONTRACT.md:compatibility; INTEGRATION.md",
+      "requirement": "Real synthetic B806 consumer compatibility; window/cap/ordinal/replay identity preserved; no runtime installation",
+      "code": [
+        {
+          "file": "solution/first_followup_integration/basis.py",
+          "symbol": "project_schedule_basis",
+          "line": 139,
+          "end_line": 246
+        }
+      ],
+      "cases": [
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_representable_extreme_times_with_zero_cooldown",
+          "line": 555,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_zero_and_exhausted_caps_remain_valid_basis",
+          "line": 600,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_real_consumer_window_boundary_ordinal_and_stable_identity",
+          "line": 612,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_real_consumer_replay_precedes_changed_current_basis",
+          "line": 632,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "tests/test_candidate_basis.py",
+          "class": "CandidateBasisTests",
+          "method": "test_zero_cooldown_allows_same_instant",
+          "line": 646,
+          "status": "PASS",
+          "gate": "candidate",
+          "stdout": "return/logs/candidate.stdout.log",
+          "stderr": "return/logs/candidate.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_consumer",
+          "line": 15,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        },
+        {
+          "file": "acceptance/run_public.py",
+          "class": "PublicCases",
+          "method": "test_consumer_too_early",
+          "line": 22,
+          "status": "PASS",
+          "gate": "public",
+          "stdout": "return/logs/public.stdout.log",
+          "stderr": "return/logs/public.stderr.log"
+        }
+      ],
+      "actual_result": "PASS",
+      "evidence_note": "Actual gate exits=0; full raw outputs linked per case. Exact inventory matches executed test-method counts."
+    }
+  ],
+  "source_preservation": {
+    "status": "PASS",
+    "protected_files": 35,
+    "changed_original_files": [
+      "solution/first_followup_integration/basis.py"
+    ],
+    "evidence": "SOURCE_INTEGRITY.json"
+  },
+  "parent_integration": "NOT_RUN; outside this component boundary"
+}

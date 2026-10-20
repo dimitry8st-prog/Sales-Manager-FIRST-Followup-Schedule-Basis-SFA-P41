@@ -1,0 +1,29 @@
+{
+  "package_id": "SFA-P41-BASIS-R1",
+  "component_status": "COMPONENT_IMPLEMENTED",
+  "component_acceptance": "PASS",
+  "gates": {
+    "reference": "PASS",
+    "package": "PASS",
+    "public": "PASS",
+    "candidate": "PASS"
+  },
+  "tests": {
+    "reference": 138,
+    "public": 19,
+    "candidate": 47
+  },
+  "total_test_methods": 204,
+  "skips": 0,
+  "expected_failures": 0,
+  "protected_files": 35,
+  "protected_status": "PASS",
+  "integration_status": "NOT_CONNECTED",
+  "installation": "NOT_RUN",
+  "parent_P41_P15_P05_P19": "NOT_RUN",
+  "postgresql": "NOT_RUN",
+  "production_acceptance": "NOT_RUN",
+  "customer_independent_acceptance": "PENDING",
+  "final_zip_verification": "Performed after freezing this ZIP; see adjacent external verification bound to final ZIP SHA-256. This file does not claim a self-referential verification.",
+  "protected_checker_note": "check_package.py retains its original fixed implementation=NOT_IMPLEMENTED message; its preparation PASS and actual public/candidate suite success are reported separately."
+}

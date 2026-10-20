@@ -1,0 +1,24 @@
+test_accepted_stays_accepted (__main__.PublicCases.test_accepted_stays_accepted) ... ok
+test_bad_times (__main__.PublicCases.test_bad_times) ... ok
+test_consumer (__main__.PublicCases.test_consumer) ... ok
+test_consumer_too_early (__main__.PublicCases.test_consumer_too_early) ... ok
+test_fences (__main__.PublicCases.test_fences) ... ok
+test_identity_locale_versions (__main__.PublicCases.test_identity_locale_versions) ... ok
+test_no_implicit_policy (__main__.PublicCases.test_no_implicit_policy) ... ok
+test_no_mutation (__main__.PublicCases.test_no_mutation) ... ok
+test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) ... ok
+test_overflow (__main__.PublicCases.test_overflow) ... ok
+test_payload_hash (__main__.PublicCases.test_payload_hash) ... ok
+test_positive_exact (__main__.PublicCases.test_positive_exact) ... ok
+test_receipt_payload_scope_identity (__main__.PublicCases.test_receipt_payload_scope_identity) ... ok
+test_scope_each_field (__main__.PublicCases.test_scope_each_field) ... ok
+test_scope_shape (__main__.PublicCases.test_scope_shape) ... ok
+test_time_offsets (__main__.PublicCases.test_time_offsets) ... ok
+test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes) ... ok
+test_utf8_identifier (__main__.PublicCases.test_utf8_identifier) ... ok
+test_valid_receipt_wrong_action (__main__.PublicCases.test_valid_receipt_wrong_action) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.015s
+
+OK

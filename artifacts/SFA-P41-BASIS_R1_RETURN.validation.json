@@ -1,0 +1,484 @@
+{
+  "verification": "SECOND_INDEPENDENT_FINAL_ZIP_GATE",
+  "zip_file": "artifacts/SFA-P41-BASIS_R1_RETURN.zip",
+  "zip_sha256": "c89c940410e1164b526842ea82bb62d0c9e5658093ba28c1e10746d1bacff296",
+  "zip_bytes": 93383,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "commands": [
+    {
+      "id": "reference",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "acceptance/run_reference.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "artifacts/verification/round2/reference.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "file": "artifacts/verification/round2/reference.stderr.log",
+        "sha256": "64eeefbd91bf089b97ca5833eace7d7d2aff7dca35d380b5e2f3ea07d11dbada",
+        "bytes": 238
+      },
+      "tests_run": 138,
+      "skips": 0,
+      "expected_failures": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "package",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "acceptance/check_package.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "artifacts/verification/round2/package.stdout.log",
+        "sha256": "b9b538939ffc42e7ddce4ad0a8ce4dbb57d1338da4f19ba573d6077308ecbf15",
+        "bytes": 217
+      },
+      "stderr": {
+        "file": "artifacts/verification/round2/package.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "tests_run": null,
+      "skips": 0,
+      "expected_failures": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "public",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "acceptance/run_public.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "artifacts/verification/round2/public.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "file": "artifacts/verification/round2/public.stderr.log",
+        "sha256": "39fca27e723ffe4b12f7f47267b17b6d917bf76ae4b8839899063ef30bebe4a1",
+        "bytes": 1495
+      },
+      "tests_run": 19,
+      "skips": 0,
+      "expected_failures": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "candidate",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "RUN_CANDIDATE_TESTS.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "artifacts/verification/round2/candidate.stdout.log",
+        "sha256": "5364c63a9b51f793fa4a7a9256acce23e00aae16d867a9d7630684259344228d",
+        "bytes": 47
+      },
+      "stderr": {
+        "file": "artifacts/verification/round2/candidate.stderr.log",
+        "sha256": "a6dbb7b5a417aa835fd737fe060958cc1c6a714114565c98502640e05d8f1c08",
+        "bytes": 7171
+      },
+      "tests_run": 47,
+      "skips": 0,
+      "expected_failures": 0,
+      "status": "PASS"
+    },
+    {
+      "id": "import_origins",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python3.12",
+        "-B",
+        "-c",
+        "import sys,json,pathlib;root=pathlib.Path.cwd();sys.path.insert(0,str(root/\"reference\"));sys.path.insert(0,str(root/\"solution\"));import sales_first_decision,sales_outbound_intent,sales_first_send_receipt,b806_api;import first_followup_integration.basis as basis;print(json.dumps({m.__name__:m.__file__ for m in [sales_first_decision,sales_outbound_intent,sales_first_send_receipt,b806_api,basis]}))"
+      ],
+      "exit_code": 0,
+      "origins": {
+        "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/sales_first_decision.py",
+        "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/sales_outbound_intent.py",
+        "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/sales_first_send_receipt.py",
+        "b806_api": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/b806_api.py",
+        "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/solution/first_followup_integration/basis.py"
+      },
+      "stdout": {
+        "file": "artifacts/verification/round2/import_origins.stdout.log",
+        "sha256": "99379e3c4b16eef111ee95ca60c1826830c00dba0cefb85164b8e5ffb39d9fbb",
+        "bytes": 740
+      },
+      "stderr": {
+        "file": "artifacts/verification/round2/import_origins.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    }
+  ],
+  "checks": {
+    "expected_frozen_zip_sha256": {
+      "status": "PASS"
+    },
+    "fresh_clean_destination": {
+      "status": "PASS"
+    },
+    "no_duplicate_entries": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/CONTRACT.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/ENGINEERING.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/INTEGRATION.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/PROTECTED_SHA256.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/RETURN.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/RUN_CANDIDATE_TESTS.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/TASK_RU.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/TESTING.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/acceptance/check_package.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/acceptance/common.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/acceptance/run_public.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/acceptance/run_reference.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/fixtures/expected.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/fixtures/positive.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/PARENT_SCOPE_EXCERPT.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/b806_api.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/sales_first_decision.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/sales_first_handoff.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/sales_first_send_receipt.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/sales_outbound_intent.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_autoreply.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_base.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_bounce.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_followup_due.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_interest.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_objection.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_optout.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_question.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/event_unknown.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/policy_de_synthetic.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/policy_en.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/policy_ru.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/state_active.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/state_handed_off.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/fixtures/first_decision/state_stopped.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/test_first_decision.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/reference/tests/test_first_send_receipt.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/CHANGELOG.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/COMMANDS.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/CONNECT_AND_ROLLBACK.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/LIMITATIONS.md": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/RESULT.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/SOURCE_INTEGRITY.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/TEST_INVENTORY.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/TRACEABILITY.json": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/candidate.stderr.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/candidate.stdout.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/import_origins.stderr.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/import_origins.stdout.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/package.stderr.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/package.stdout.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/public.stderr.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/public.stdout.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/reference.stderr.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/logs/reference.stdout.log": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/solution/first_followup_integration/basis.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/tests/test_candidate_basis.py": {
+      "status": "PASS"
+    },
+    "safe_entry_SFA-P41-BASIS_R1_RETURN/return/MANIFEST_SHA256.json": {
+      "status": "PASS"
+    },
+    "one_required_root": {
+      "status": "PASS"
+    },
+    "crc": {
+      "status": "PASS"
+    },
+    "manifest_exact_members": {
+      "status": "PASS"
+    },
+    "manifest_hashes": {
+      "status": "PASS",
+      "detail": []
+    },
+    "all_original_members_retained": {
+      "status": "PASS"
+    },
+    "protected_manifest_original": {
+      "status": "PASS"
+    },
+    "protected_original_hashes": {
+      "status": "PASS"
+    },
+    "only_permitted_original_change": {
+      "status": "PASS",
+      "detail": [
+        "solution/first_followup_integration/basis.py"
+      ]
+    },
+    "only_permitted_additions": {
+      "status": "PASS",
+      "detail": [
+        "return/CHANGELOG.md",
+        "return/COMMANDS.json",
+        "return/CONNECT_AND_ROLLBACK.md",
+        "return/LIMITATIONS.md",
+        "return/MANIFEST_SHA256.json",
+        "return/RESULT.json",
+        "return/SOURCE_INTEGRITY.json",
+        "return/TEST_INVENTORY.json",
+        "return/TRACEABILITY.json",
+        "return/logs/candidate.stderr.log",
+        "return/logs/candidate.stdout.log",
+        "return/logs/import_origins.stderr.log",
+        "return/logs/import_origins.stdout.log",
+        "return/logs/package.stderr.log",
+        "return/logs/package.stdout.log",
+        "return/logs/public.stderr.log",
+        "return/logs/public.stdout.log",
+        "return/logs/reference.stderr.log",
+        "return/logs/reference.stdout.log",
+        "tests/test_candidate_basis.py"
+      ]
+    },
+    "all_zip_members_match_live": {
+      "status": "PASS"
+    },
+    "trace_symbols_case_names_and_lines": {
+      "status": "PASS",
+      "detail": []
+    },
+    "clean_copy_exact_before_gates": {
+      "status": "PASS"
+    },
+    "all_47_own_cases_traced": {
+      "status": "PASS"
+    },
+    "result_truthful_component_scope": {
+      "status": "PASS"
+    },
+    "first_round_raw_log_hashes": {
+      "status": "PASS",
+      "detail": []
+    },
+    "round2_reference": {
+      "status": "PASS",
+      "detail": {
+        "exit": 0,
+        "tests": 138
+      }
+    },
+    "round2_package": {
+      "status": "PASS",
+      "detail": {
+        "exit": 0,
+        "tests": null
+      }
+    },
+    "fixed_checker_label_preserved": {
+      "status": "PASS"
+    },
+    "round2_public": {
+      "status": "PASS",
+      "detail": {
+        "exit": 0,
+        "tests": 19
+      }
+    },
+    "round2_candidate": {
+      "status": "PASS",
+      "detail": {
+        "exit": 0,
+        "tests": 47
+      }
+    },
+    "candidate_gate_explicit_zero_skips": {
+      "status": "PASS"
+    },
+    "clean_import_origins": {
+      "status": "PASS"
+    },
+    "all_extracted_files_unchanged_after_gates": {
+      "status": "PASS"
+    },
+    "frozen_zip_unchanged_after_gates": {
+      "status": "PASS"
+    },
+    "live_package_still_matches_frozen_zip": {
+      "status": "PASS",
+      "detail": []
+    },
+    "204_real_test_methods": {
+      "status": "PASS"
+    }
+  },
+  "zip_files": 58,
+  "manifest_files": 57,
+  "protected_files": 35,
+  "status": "PASS",
+  "traceability": {
+    "requirements": 9,
+    "own_methods": 47,
+    "own_methods_traced": 47,
+    "public_methods": 19,
+    "public_methods_traced": 18,
+    "note": "Requirement traceability covers all47 own methods and18 public methods; positive exact result is covered by own test_exact_fixture_and_seven_fields. Public test_positive_exact remains executed by unchanged public gate."
+  },
+  "import_origins": {
+    "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/sales_first_decision.py",
+    "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/sales_outbound_intent.py",
+    "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/sales_first_send_receipt.py",
+    "b806_api": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/reference/b806_api.py",
+    "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/final-clean-check/SFA-P41-BASIS_R1_RETURN/solution/first_followup_integration/basis.py"
+  },
+  "tests": {
+    "reference": 138,
+    "public": 19,
+    "candidate": 47
+  },
+  "total_test_methods": 204,
+  "skips": 0,
+  "expected_failures": 0,
+  "component_status": "COMPONENT_IMPLEMENTED",
+  "integration_status": "NOT_CONNECTED",
+  "limitations": [
+    "Synthetic in-memory B806 public consumer only; no PostgreSQL, authenticated production, atomicity or connected integration proved.",
+    "Parent P41/P15/P05/P19, trusted owners/time provenance, reply/STOP/HUMAN invalidation, receipt-once persistence and due-loop remain outside component scope.",
+    "No installation, SQL, activation, outbound sending or deployment performed.",
+    "Customer independent acceptance PENDING; production acceptance NOT_RUN.",
+    "Source package checker retains its protected fixed NOT_IMPLEMENTED label; actual implementation gates independently pass."
+  ]
+}

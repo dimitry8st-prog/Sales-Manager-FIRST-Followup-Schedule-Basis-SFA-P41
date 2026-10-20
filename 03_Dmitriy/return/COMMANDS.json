@@ -1,0 +1,176 @@
+{
+  "component_status": "COMPONENT_IMPLEMENTED",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "cwd": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy",
+  "import_origins": {
+    "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_decision.py",
+    "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_outbound_intent.py",
+    "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_send_receipt.py",
+    "b806_api": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/b806_api.py",
+    "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py"
+  },
+  "commands": [
+    {
+      "id": "import_origins",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "-c",
+        "import sys,json,pathlib;root=pathlib.Path.cwd();sys.path.insert(0,str(root/\"reference\"));sys.path.insert(0,str(root/\"solution\"));import sales_first_decision,sales_outbound_intent,sales_first_send_receipt,b806_api;import first_followup_integration.basis as basis;print(json.dumps({m.__name__:m.__file__ for m in [sales_first_decision,sales_outbound_intent,sales_first_send_receipt,b806_api,basis]}))"
+      ],
+      "exit_code": 0,
+      "status": "PASS",
+      "origins": {
+        "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_decision.py",
+        "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_outbound_intent.py",
+        "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_send_receipt.py",
+        "b806_api": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/b806_api.py",
+        "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py"
+      },
+      "stdout": {
+        "file": "return/logs/import_origins.stdout.log",
+        "sha256": "6edd7ea6f00fb9f96995922cdab7ab6bf34a9eaa64e58a0f8d41d5a97c1099a9",
+        "bytes": 610
+      },
+      "stderr": {
+        "file": "return/logs/import_origins.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    },
+    {
+      "id": "reference",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "acceptance/run_reference.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "return/logs/reference.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "file": "return/logs/reference.stderr.log",
+        "sha256": "64eeefbd91bf089b97ca5833eace7d7d2aff7dca35d380b5e2f3ea07d11dbada",
+        "bytes": 238
+      },
+      "tests_run": 138,
+      "status": "PASS",
+      "skips": 0,
+      "expected_failures": 0,
+      "import_origins": {
+        "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_decision.py",
+        "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_outbound_intent.py",
+        "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_send_receipt.py",
+        "b806_api": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/b806_api.py",
+        "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py"
+      }
+    },
+    {
+      "id": "package",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "acceptance/check_package.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "return/logs/package.stdout.log",
+        "sha256": "b9b538939ffc42e7ddce4ad0a8ce4dbb57d1338da4f19ba573d6077308ecbf15",
+        "bytes": 217
+      },
+      "stderr": {
+        "file": "return/logs/package.stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "tests_run": null,
+      "protected_script_fixed_implementation_label": "NOT_IMPLEMENTED",
+      "status": "PASS",
+      "skips": 0,
+      "expected_failures": 0,
+      "import_origins": {
+        "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_decision.py",
+        "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_outbound_intent.py",
+        "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_send_receipt.py",
+        "b806_api": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/b806_api.py",
+        "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py"
+      }
+    },
+    {
+      "id": "public",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "acceptance/run_public.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "return/logs/public.stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      },
+      "stderr": {
+        "file": "return/logs/public.stderr.log",
+        "sha256": "e6ac0ba6b151d3b3ec3bd155253a94c12a82724304cd4eee54e777b994be88a8",
+        "bytes": 1495
+      },
+      "tests_run": 19,
+      "status": "PASS",
+      "skips": 0,
+      "expected_failures": 0,
+      "import_origins": {
+        "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_decision.py",
+        "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_outbound_intent.py",
+        "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_send_receipt.py",
+        "b806_api": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/b806_api.py",
+        "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py"
+      }
+    },
+    {
+      "id": "candidate",
+      "interpreter": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "cwd": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy",
+      "argv": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-B",
+        "RUN_CANDIDATE_TESTS.py"
+      ],
+      "exit_code": 0,
+      "stdout": {
+        "file": "return/logs/candidate.stdout.log",
+        "sha256": "5364c63a9b51f793fa4a7a9256acce23e00aae16d867a9d7630684259344228d",
+        "bytes": 47
+      },
+      "stderr": {
+        "file": "return/logs/candidate.stderr.log",
+        "sha256": "08e2ee429d380a8832aab42af7659b8752d6ad23fc46993b44237fe108048d73",
+        "bytes": 7171
+      },
+      "tests_run": 47,
+      "status": "PASS",
+      "skips": 0,
+      "expected_failures": 0,
+      "import_origins": {
+        "sales_first_decision": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_decision.py",
+        "sales_outbound_intent": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_outbound_intent.py",
+        "sales_first_send_receipt": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/sales_first_send_receipt.py",
+        "b806_api": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/reference/b806_api.py",
+        "first_followup_integration.basis": "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py"
+      }
+    }
+  ],
+  "note": "The protected package checker prints a fixed implementation=NOT_IMPLEMENTED label. It is a preparation/integrity gate, not the implementation status. Public and own gates verify implementation."
+}
