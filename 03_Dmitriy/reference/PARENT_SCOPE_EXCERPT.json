@@ -1,0 +1,30 @@
+{
+  "id": "SFA-P41",
+  "revision": "R1",
+  "title": "Follow-up: trusted schedule basis і receipt-once adapters",
+  "proposed_paths": [
+    "first_followup_integration/basis.py",
+    "tests/audit_completion/test_followup_basis.py"
+  ],
+  "implementation_steps": [
+    "Спожити B8-06 R3.1 exact schedule/tick/cancel contracts, F1-03 і persisted last meaningful reply.",
+    "Скласти trusted versioned schedule basis/caps/window/language/receipt-once projection зі справжніх owners.",
+    "Жодного self-created timestamp/message proof; due-loop та atomic tick/cancel — P15."
+  ],
+  "acceptance_vectors": [
+    "Same basis/event дає той самий schedule identity; зміна reply/STOP/HUMAN робить старий basis недійсним.",
+    "Exact schedule window/cap boundaries/timezone та locale/version checked.",
+    "Accepted B8-06 installed hash збережено, pure implementation не змінена."
+  ],
+  "depends_on": [
+    "SFA-P05",
+    "SFA-P19"
+  ],
+  "requirements": [
+    "R10"
+  ],
+  "required_check_groups": [
+    "R10.1",
+    "R10.2"
+  ]
+}

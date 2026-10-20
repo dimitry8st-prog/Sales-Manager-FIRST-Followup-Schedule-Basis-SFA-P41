@@ -1,0 +1,9 @@
+# Подключение и восстановление
+
+Компонент возвращает ровно payload порта `schedule.basis`, который B8-06 Service._schedule запрашивает с `{scope,policy_version,source_action_id}`. Центральный integration owner в актуальном transaction-scoped порте читает F103 state/policy и соответствующий immutable action/attempt/receipt из их владельцев, проверяет authenticated principal/scope/current version и provenance времени, вызывает project_schedule_basis и возвращает DTO. Сырые caller/model/email поля нельзя прямо подавать как trusted state.
+
+Ошибка компонента сопоставляется центральным адаптером в отсутствие допустимого basis/DEPENDENCY_UNAVAILABLE согласно existing B806 port contract; никакой schedule/dispatch при этом не создаётся. Код кандидата не меняет Service или journal. Центральный владелец сохраняет shared lock/transaction protocol, replay-before-current-basis и STOP/HUMAN/reply invalidation; именно он владеет current evidence и receipt-once. Отдельное подключение existing dialogue.followup codec остаётся P15.
+
+Приёмка компонента включает настоящий public Service.execute над синтетическим in-memory ports fixture только для DTO compatibility. Это не PostgreSQL, не authenticated production и не проверка атомарности. До connected integration нужны точные принятые P05/P19 owner mappings, актуальная SOURCE identity, version/time provenance и соответствующие P41/P15 acceptance vectors (reply/STOP/HUMAN invalidation, time window и receipt-once). Эти gates не передаются кандидату как мнимые готовые входы.
+
+На возврате интегратор сверяет исходные hashes, накладывает единственный новый basis.py в проверенную integration namespace, запускает затронутые исходные и новые тесты. До установки: резервная копия точной базы и проверенное восстановление; откат удаляет только собственные добавленные файлы по manifest. Нельзя откатывать чужие последующие изменения. Ни установка, ни SQL, ни активация данным пакетом не разрешаются.

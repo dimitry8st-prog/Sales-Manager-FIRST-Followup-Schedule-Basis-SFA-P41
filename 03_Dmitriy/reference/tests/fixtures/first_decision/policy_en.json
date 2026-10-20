@@ -1,0 +1,22 @@
+{
+  "schema_version": "FIRST_POLICY_V1",
+  "policy_version": "fixture-v1",
+  "product_id": "product-test",
+  "locale": "en-GB",
+  "sender_ref": "mb-test",
+  "max_followups": 2,
+  "cooldown_seconds": 86400,
+  "approved_fact_ids": ["fact-test"],
+  "approved_templates": {
+    "explain": {
+      "body": "Synthetic approved statement.",
+      "fact_ids": ["fact-test"],
+      "locale": "en-GB"
+    }
+  },
+  "allowed_locales": ["en-GB", "ru-RU"],
+  "language_pack_versions": {
+    "en-GB": "v1",
+    "ru-RU": "v1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schema_version": "FIRST_POLICY_V1",
+  "policy_version": "fixture-v1",
+  "product_id": "product-test",
+  "locale": "de-DE",
+  "sender_ref": "mb-test",
+  "max_followups": 2,
+  "cooldown_seconds": 86400,
+  "approved_fact_ids": ["fact-test"],
+  "approved_templates": {
+    "explain": {
+      "body": "Synthetische genehmigte Aussage.",
+      "fact_ids": ["fact-test"],
+      "locale": "de-DE"
+    }
+  },
+  "allowed_locales": ["en-GB", "ru-RU", "de-DE"],
+  "language_pack_versions": {
+    "en-GB": "v1",
+    "ru-RU": "v1",
+    "de-DE": "v1"
+  }
+}

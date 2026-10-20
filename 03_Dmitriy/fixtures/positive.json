@@ -1,0 +1,105 @@
+{
+  "scope": {
+    "client_id": "client-test",
+    "campaign_id": "11111111-1111-4111-8111-111111111111",
+    "lead_id": "lead-test",
+    "mailbox_ref": "mb-test",
+    "thread_id": "Thread-A"
+  },
+  "policy_version": "policy-test",
+  "source_action_id": "action-test",
+  "state": {
+    "schema_version": "FIRST_DIALOGUE_STATE_V1",
+    "client_id": "client-test",
+    "runtime_campaign_id": "11111111-1111-4111-8111-111111111111",
+    "lead_id": "lead-test",
+    "mailbox_ref": "mb-test",
+    "thread_id": "Thread-A",
+    "status": "ACTIVE",
+    "revision": 3,
+    "processed_event_ids": [],
+    "last_outbound_at": "2026-10-20T10:00:00Z",
+    "followups_sent": 1
+  },
+  "policy": {
+    "schema_version": "FIRST_POLICY_V1",
+    "policy_version": "policy-test",
+    "product_id": "product-test",
+    "locale": "ru-RU",
+    "sender_ref": "mb-test",
+    "max_followups": 3,
+    "cooldown_seconds": 3600,
+    "approved_fact_ids": [
+      "fact-test"
+    ],
+    "approved_templates": {
+      "followup-test": {
+        "body": "Тестовий синтетичний текст — не комерційна обіцянка.",
+        "fact_ids": [
+          "fact-test"
+        ],
+        "locale": "ru-RU"
+      }
+    },
+    "allowed_locales": [
+      "ru-RU"
+    ],
+    "language_pack_versions": {
+      "ru-RU": "pack-ru-1"
+    }
+  },
+  "action": {
+    "schema_version": "FIRST_ACTION_INTENT_V1",
+    "action_id": "action-test",
+    "scope": {
+      "client_id": "client-test",
+      "runtime_campaign_id": "11111111-1111-4111-8111-111111111111",
+      "lead_id": "lead-test",
+      "mailbox_ref": "mb-test",
+      "thread_id": "Thread-A"
+    },
+    "expected_state_revision": 0,
+    "event_id": "event-test",
+    "kind": "FOLLOWUP",
+    "policy_version": "policy-test",
+    "locale": "ru-RU",
+    "language_pack_version": "pack-ru-1",
+    "template_id": "followup-test",
+    "fact_ids": [
+      "fact-test"
+    ],
+    "payload": {
+      "recipient_ref": "lead-test",
+      "subject": "Synthetic subject",
+      "body": "Synthetic body"
+    },
+    "payload_sha256": "af9e792d9ab3e82362d6249f3bef86b8f06d0633f7992833b10c58600f86a83f",
+    "binding_version": "binding-test"
+  },
+  "attempt": {
+    "schema_version": "FIRST_SEND_ATTEMPT_V1",
+    "client_id": "client-test",
+    "runtime_campaign_id": "11111111-1111-4111-8111-111111111111",
+    "lead_id": "lead-test",
+    "mailbox_ref": "mb-test",
+    "action_id": "action-test",
+    "attempt_no": 1,
+    "payload_sha256": "af9e792d9ab3e82362d6249f3bef86b8f06d0633f7992833b10c58600f86a83f",
+    "phase": "DISPATCH_STARTED"
+  },
+  "receipt": {
+    "schema_version": "FIRST_PROVIDER_SEND_RESULT_V1",
+    "client_id": "client-test",
+    "runtime_campaign_id": "11111111-1111-4111-8111-111111111111",
+    "lead_id": "lead-test",
+    "mailbox_ref": "mb-test",
+    "action_id": "action-test",
+    "attempt_no": 1,
+    "payload_sha256": "af9e792d9ab3e82362d6249f3bef86b8f06d0633f7992833b10c58600f86a83f",
+    "outcome": "DELIVERED",
+    "provider_message_id": "provider-message-test",
+    "evidence_ref": "evidence-test",
+    "not_sent_reason": null
+  },
+  "now": "2026-10-20T12:00:00Z"
+}

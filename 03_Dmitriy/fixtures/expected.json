@@ -1,0 +1,9 @@
+{
+  "policy_version": "policy-test",
+  "source_action_id": "action-test",
+  "source_state": "DELIVERED",
+  "last_outbound_at": "2026-10-20T10:00:00Z",
+  "max_followups": 3,
+  "cooldown_seconds": 3600,
+  "followups_sent": 1
+}

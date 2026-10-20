@@ -1,0 +1,816 @@
+test_accepted_stays_accepted (__main__.PublicCases.test_accepted_stays_accepted) ... ERROR
+test_bad_times (__main__.PublicCases.test_bad_times) ... 
+  test_bad_times (__main__.PublicCases.test_bad_times) (value=None) ... ERROR
+  test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T13:00:00Z') ... ERROR
+  test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T10:00:00') ... ERROR
+  test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T10:00:00-00:00') ... ERROR
+  test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T10:00:00.1234567Z') ... ERROR
+  test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-02-30T10:00:00Z') ... ERROR
+test_bad_times (__main__.PublicCases.test_bad_times) ... ERROR
+test_consumer (__main__.PublicCases.test_consumer) ... ERROR
+test_consumer_too_early (__main__.PublicCases.test_consumer_too_early) ... ERROR
+test_fences (__main__.PublicCases.test_fences) ... ERROR
+test_identity_locale_versions (__main__.PublicCases.test_identity_locale_versions) ... ERROR
+test_no_implicit_policy (__main__.PublicCases.test_no_implicit_policy) ... ERROR
+test_no_mutation (__main__.PublicCases.test_no_mutation) ... ERROR
+test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) ... 
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=True) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=-1) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=1.5) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val='2') ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=None) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=True) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=-1) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=1.5) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val='2') ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=None) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=True) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=-1) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=1.5) ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val='2') ... ERROR
+  test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=None) ... ERROR
+test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) ... ERROR
+test_overflow (__main__.PublicCases.test_overflow) ... ERROR
+test_payload_hash (__main__.PublicCases.test_payload_hash) ... ERROR
+test_positive_exact (__main__.PublicCases.test_positive_exact) ... ERROR
+test_receipt_payload_scope_identity (__main__.PublicCases.test_receipt_payload_scope_identity) ... ERROR
+test_scope_each_field (__main__.PublicCases.test_scope_each_field) ... 
+  test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='client_id') ... ERROR
+  test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='campaign_id') ... ERROR
+  test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='lead_id') ... ERROR
+  test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='mailbox_ref') ... ERROR
+  test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='thread_id') ... ERROR
+test_scope_shape (__main__.PublicCases.test_scope_shape) ... ERROR
+test_time_offsets (__main__.PublicCases.test_time_offsets) ... ERROR
+test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes) ... 
+  test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes) (outcome='TIMEOUT') ... ERROR
+  test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes) (outcome='UNKNOWN') ... ERROR
+test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes) ... ERROR
+test_utf8_identifier (__main__.PublicCases.test_utf8_identifier) ... ERROR
+test_valid_receipt_wrong_action (__main__.PublicCases.test_valid_receipt_wrong_action) ... ERROR
+
+======================================================================
+ERROR: test_accepted_stays_accepted (__main__.PublicCases.test_accepted_stays_accepted)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 26, in test_accepted_stays_accepted
+    f=fixture();f['receipt']['outcome']='ACCEPTED';self.assertEqual(self.go(f)['source_state'],'ACCEPTED')
+                                                                    ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_bad_times (__main__.PublicCases.test_bad_times) (value=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 60, in test_bad_times
+    f=fixture();f['state']['last_outbound_at']=val;self.reject(f)
+                                                   ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T13:00:00Z')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 60, in test_bad_times
+    f=fixture();f['state']['last_outbound_at']=val;self.reject(f)
+                                                   ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T10:00:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 60, in test_bad_times
+    f=fixture();f['state']['last_outbound_at']=val;self.reject(f)
+                                                   ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T10:00:00-00:00')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 60, in test_bad_times
+    f=fixture();f['state']['last_outbound_at']=val;self.reject(f)
+                                                   ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-10-20T10:00:00.1234567Z')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 60, in test_bad_times
+    f=fixture();f['state']['last_outbound_at']=val;self.reject(f)
+                                                   ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_bad_times (__main__.PublicCases.test_bad_times) (value='2026-02-30T10:00:00Z')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 60, in test_bad_times
+    f=fixture();f['state']['last_outbound_at']=val;self.reject(f)
+                                                   ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_bad_times (__main__.PublicCases.test_bad_times)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 61, in test_bad_times
+    f=fixture();f['now']=datetime.datetime(2026,10,20);self.reject(f)
+                                                       ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_consumer (__main__.PublicCases.test_consumer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 16, in test_consumer
+    f=fixture();out=self.go(f);self.assertEqual(set(out),b806_api.BASIS_FIELDS)
+                    ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_consumer_too_early (__main__.PublicCases.test_consumer_too_early)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 23, in test_consumer_too_early
+    f=fixture();p=Ports(self.go(f),f['scope']);q={'scope':f['scope'],'policy_version':f['policy_version'],'source_action_id':f['source_action_id'],'ordinal':1,'due_at':'2026-10-20T10:59:59.999999Z'}
+                        ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_fences (__main__.PublicCases.test_fences)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 47, in test_fences
+    f=fixture();f['state']['status']=status;self.reject(f,'FENCED')
+                                            ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_identity_locale_versions (__main__.PublicCases.test_identity_locale_versions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 39, in test_identity_locale_versions
+    f=fixture();f[obj][key]=val;self.reject(f,'SCOPE_MISMATCH')
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_no_implicit_policy (__main__.PublicCases.test_no_implicit_policy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 72, in test_no_implicit_policy
+    f=fixture();del f['policy']['language_pack_versions'];self.reject(f,'DEPENDENCY_REJECTED')
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_no_mutation (__main__.PublicCases.test_no_mutation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 14, in test_no_mutation
+    f=fixture();before=copy.deepcopy(f);a=self.go(f);b=self.go(f);self.assertEqual(f,before);self.assertEqual(a,b);a['source_state']='x';self.assertEqual(self.go(f),b)
+                                          ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=1.5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val='2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='state', key='followups_sent', val=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=1.5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val='2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='max_followups', val=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=-1)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=1.5)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val='2')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries) (obj='policy', key='cooldown_seconds', val=None)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 52, in test_numeric_boundaries
+    f=fixture();f[obj][key]=val;self.reject(f)
+                                ^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_numeric_boundaries (__main__.PublicCases.test_numeric_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 53, in test_numeric_boundaries
+    f=fixture();f['policy']['max_followups']=0;self.assertEqual(self.go(f)['max_followups'],0)
+                                                                ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_overflow (__main__.PublicCases.test_overflow)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 63, in test_overflow
+    f=fixture();f['policy']['cooldown_seconds']=10**50;self.reject(f,'SOURCE_UNCONFIRMED')
+                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_payload_hash (__main__.PublicCases.test_payload_hash)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 65, in test_payload_hash
+    f=fixture();f['action']['payload']['body']='changed';self.reject(f,'DEPENDENCY_REJECTED')
+                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_positive_exact (__main__.PublicCases.test_positive_exact)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 12, in test_positive_exact
+    def test_positive_exact(self):self.assertEqual(self.go(),json.loads((ROOT/'fixtures/expected.json').read_text()))
+                                                   ^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_receipt_payload_scope_identity (__main__.PublicCases.test_receipt_payload_scope_identity)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 42, in test_receipt_payload_scope_identity
+    f=fixture();f['receipt'][key]=val;self.reject(f,'DEPENDENCY_REJECTED')
+                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='client_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 36, in test_scope_each_field
+    f=fixture();f['scope'][k]='22222222-2222-4222-8222-222222222222' if k=='campaign_id' else 'other';self.reject(f,'SCOPE_MISMATCH')
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='campaign_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 36, in test_scope_each_field
+    f=fixture();f['scope'][k]='22222222-2222-4222-8222-222222222222' if k=='campaign_id' else 'other';self.reject(f,'SCOPE_MISMATCH')
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='lead_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 36, in test_scope_each_field
+    f=fixture();f['scope'][k]='22222222-2222-4222-8222-222222222222' if k=='campaign_id' else 'other';self.reject(f,'SCOPE_MISMATCH')
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='mailbox_ref')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 36, in test_scope_each_field
+    f=fixture();f['scope'][k]='22222222-2222-4222-8222-222222222222' if k=='campaign_id' else 'other';self.reject(f,'SCOPE_MISMATCH')
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_scope_each_field (__main__.PublicCases.test_scope_each_field) (field='thread_id')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 36, in test_scope_each_field
+    f=fixture();f['scope'][k]='22222222-2222-4222-8222-222222222222' if k=='campaign_id' else 'other';self.reject(f,'SCOPE_MISMATCH')
+                                                                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_scope_shape (__main__.PublicCases.test_scope_shape)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 68, in test_scope_shape
+    f=fixture();f['scope']=val;self.reject(f,'INVALID_INPUT')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_time_offsets (__main__.PublicCases.test_time_offsets)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 56, in test_time_offsets
+    f=fixture();f['state']['last_outbound_at']='2026-10-20T12:00:00.123456+02:00';self.assertEqual(self.go(f)['last_outbound_at'],'2026-10-20T10:00:00.123456Z')
+                                                                                                   ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes) (outcome='TIMEOUT')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 30, in test_unconfirmed_outcomes
+    f=fixture();f['receipt'].update(outcome=outcome,provider_message_id=None,evidence_ref=None);self.reject(f,'SOURCE_UNCONFIRMED')
+                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes) (outcome='UNKNOWN')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 30, in test_unconfirmed_outcomes
+    f=fixture();f['receipt'].update(outcome=outcome,provider_message_id=None,evidence_ref=None);self.reject(f,'SOURCE_UNCONFIRMED')
+                                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_unconfirmed_outcomes (__main__.PublicCases.test_unconfirmed_outcomes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 31, in test_unconfirmed_outcomes
+    f=fixture();f['receipt']=None;self.reject(f,'SOURCE_UNCONFIRMED')
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_utf8_identifier (__main__.PublicCases.test_utf8_identifier)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 70, in test_utf8_identifier
+    f=fixture();f['scope']['client_id']='bad\ud800';self.reject(f,'INVALID_INPUT')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+======================================================================
+ERROR: test_valid_receipt_wrong_action (__main__.PublicCases.test_valid_receipt_wrong_action)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 44, in test_valid_receipt_wrong_action
+    f=fixture();f['attempt']['action_id']=f['receipt']['action_id']='other';self.reject(f,'SCOPE_MISMATCH')
+                                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 8, in reject
+    with self.assertRaises(ScheduleBasisError) as caught:self.go(f)
+                                                         ^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/acceptance/run_public.py", line 6, in go
+    def go(self,f=None):return project_schedule_basis(**(fixture() if f is None else f))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/8febe5931947/p41-github/repo/03_Dmitriy/solution/first_followup_integration/basis.py", line 9, in project_schedule_basis
+    raise NotImplementedError("MISSING_IMPLEMENTATION")
+NotImplementedError: MISSING_IMPLEMENTATION
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.028s
+
+FAILED (errors=46)

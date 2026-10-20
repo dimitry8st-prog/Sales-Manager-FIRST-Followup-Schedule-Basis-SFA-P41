@@ -1,0 +1,29 @@
+{
+  "project_id": "sales-manager-first",
+  "package_id": "SFA-P41-BASIS-R1",
+  "prepared_for": "Дмитрий",
+  "parent": "SFA-P41",
+  "boundary": "PURE_EXISTING_SCHEDULE_BASIS_DTO_BRIDGE",
+  "original_requirement": "Trusted versioned schedule basis/caps/window/language/receipt-once projection; no new timestamp or send proof",
+  "extracted_result": "Pure structural/correlation DTO phase of parent P41, not trusted owner implementation or receipt-once persistence",
+  "reference_source": "audit_source/Sales_First_Full_System_Audit/cp04/source",
+  "accepted_consumer_source": "cp07 inputs B8-06_R31_Installation_Evidence/previous/B8-06_R31_Acceptance_Evidence.zip/input/B8-06_R31_RETURN.zip/solution/first_followup_runtime/api.py",
+  "accepted_consumer_sha256": "c1dee48127860509fd0218e0e5caf4376e82a9b7455927566e1a8e49abc0d0c5",
+  "source_locators": [
+    "cp10/specs/SFA-P41-R1.json",
+    "cp03/sources/contracts/B8-06_Ivan_STAZH_R3/B8-06_Ivan_STAZH_R3/PORT_CONTRACTS.json schedule.basis",
+    "cp04/source/sales_first_decision.py decide_next_action",
+    "cp04/source/sales_outbound_intent.py build_outbound_intent",
+    "cp04/source/sales_first_send_receipt.py normalize_send_receipt"
+  ],
+  "ownership": "No mutation, I/O, schedules, counters, schema or journal; source owners remain current assignees",
+  "compatibility": "Exact B806 BASIS_FIELDS; original F103/F114/F108 APIs reused read-only; scope campaign_id mapped explicitly to runtime_campaign_id",
+  "remaining_parent_gates": [
+    "Trusted current owner/auth/time and version mapping",
+    "Confirmed timestamp source action provenance",
+    "Reply/STOP/HUMAN invalidation and atomic receipt-once",
+    "P05/P19 integration and P15 due-loop; real PG/installed/connected gates"
+  ],
+  "engineering_verdict": "READY_FOR_COMPONENT_PACKAGE_REVIEW",
+  "independent_acceptance": "PENDING"
+}

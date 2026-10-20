@@ -1,0 +1,13 @@
+{
+  "schema_version": "FIRST_DIALOGUE_STATE_V1",
+  "client_id": "client-test",
+  "runtime_campaign_id": "11111111-1111-4111-8111-111111111111",
+  "lead_id": "22222222-2222-4222-8222-222222222222",
+  "mailbox_ref": "mb-test",
+  "thread_id": "Thread-A",
+  "status": "STOPPED",
+  "revision": 0,
+  "processed_event_ids": [],
+  "last_outbound_at": null,
+  "followups_sent": 0
+}
